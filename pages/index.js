@@ -1,86 +1,147 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import React from 'react';
+// import Head from 'next/head';
+// import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
+      <div className="h-screen flex">
+        <div
+          className="lg:flex w-full lg:w-1/2 justify-around items-center text-center bg-zinc-900"
+          style={{
+            maxWidth: '600px',
+            flexShrink: 0,
+          }}>
+          <div className="w-full mx-auto px-20 flex-col items-center space-y-6">
+            <h1 className="text-white font-bold text-4xl">
+              Experience a world of more trusted digital interactions.
+            </h1>
 
-        <nav className="navbar fixed-top">
-            <div className="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
-                
+            <p className="text-white mt-1">
+              Welcome! In this interactive demo, we’ll see how trusted digital credentials can
+              streamline the processes behind everyday life and empower people with control over
+              their digital information.
+            </p>
+            <br />
+            <br />
+            <h3 className="text-white font-bold text-base">
+              Get the Dock Wallet to store and manage credentials
+            </h3>
 
-                <a className="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
-                    <img src="images/logo.svg" alt="alternative" className="h-8" />
+            <div className="flex">
+              <img
+                src="https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/628741766ee898458654a82a_dock%20wallet%20app%20icon.png"
+                loading="lazy"
+                width="88"
+                alt=""></img>
+              <div className="flex w-full bg-gray-900 rounded-lg ml-4 justify-around items-center p-2 bg-neutral-800">
+                <a
+                  data-w-id="d362f523-4769-a52a-7897-ad455d324f08"
+                  href="https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+                  target="_blank"
+                  className="mr-2"
+                  rel="noreferrer">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/62874177177afb45315d5c6a_Frame.png"
+                    loading="lazy"
+                    width="178"
+                    alt=""
+                  />
                 </a>
-
-                <button className="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
-                    <span className="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
-                </button>
-
-                <div className="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
-                    <ul className="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
-                        <li>
-                            <a className="nav-link page-scroll active" href="#header">Home <span className="sr-only">(current)</span></a>
-                        </li>
-                        <li>
-                            <a className="nav-link page-scroll" href="#features">Features</a>
-                        </li>
-                        <li>
-                            <a className="nav-link page-scroll" href="#details">Details</a>
-                        </li>
-                        <li>
-                            <a className="nav-link page-scroll" href="#pricing">Pricing</a>
-                        </li>
-                        <li className="dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
-                            <div className="dropdown-menu" aria-labelledby="dropdown01">
-                                <a className="dropdown-item page-scroll" href="article.html">Article Details</a>
-                                <div className="dropdown-divider"></div>
-                                <a className="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                                <div className="dropdown-divider"></div>
-                                <a className="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a className="nav-link page-scroll" href="#download">Download</a>
-                        </li>
-                    </ul>
-                    <span className="block lg:ml-3.5">
-                        <a className="no-underline" href="#your-link">
-                            <i className="fab fa-apple text-indigo-600 hover:text-pink-500 text-xl transition-all duration-200 mr-1.5"></i>
-                        </a>
-                        <a className="no-underline" href="#your-link">
-                            <i className="fab fa-android text-indigo-600 hover:text-pink-500 text-xl transition-all duration-200"></i>
-                        </a>
-                    </span>
-                </div>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.dockapp"
+                  target="_blank"
+                  rel="noreferrer">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/62874176e24abd6ceb8583ca_Frame%20255.png"
+                    loading="lazy"
+                    width="178"
+                    data-w-id="d362f523-4769-a52a-7897-ad455d324f0b"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
-        </nav>
-
-        <header id="header" className="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
-            <div className="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
-                <div className="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
-                    <h1 className="h1-large mb-5">Demo Dock's Verifiable Credential technology today</h1>
-                    <p className="p-large mb-8">Start getting things done together with your team based on Pavo's revolutionary team management features</p>
-                    <a className="btn-solid-lg" href="#your-link"><i className="fab fa-apple"></i>Download</a>
-                    <a className="btn-solid-lg secondary" href="#your-link"><i className="fab fa-google-play"></i>Download</a>
-                </div>
-                <div className="xl:text-right">
-                    <img src="https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/628ba814a6441ddd0770fc02_Frame%20344.png" loading="lazy" data-w-id="65624ab1-ef62-1eca-0a56-cc192d7a17db" width="650" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 650px" srcset="https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/628ba814a6441ddd0770fc02_Frame%20344-p-500.png 500w, https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/628ba814a6441ddd0770fc02_Frame%20344-p-800.png 800w, https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/628ba814a6441ddd0770fc02_Frame%20344-p-1080.png 1080w, https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/628ba814a6441ddd0770fc02_Frame%20344.png 1300w" alt="" className="dock-wallet-hero-image inline" />
-                </div>
-            </div> 
-        </header> 
-       
-
-
-        <div className="pt-4 pb-14 text-center">
-            <div className="container px-4 sm:px-8 xl:px-4">
-                <p className="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto"> Team management mobile apps don’t get better than Pavo. It’s probably the best app in the world for this purpose. Don’t hesitate to give it a try today and you will fall in love with it</p>
-            </div> 
+          </div>
         </div>
+        <div
+          className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8"
+          style={{ width: '100%' }}>
+          <div className="w-full px-8 md:px-32 lg:px-24">
+            <form
+              className="bg-white rounded-md shadow-2xl p-5"
+              method="POST"
+              action="/dashboard"
+              style={{ maxWidth: '500px', margin: '0 auto' }}>
+              <h1 className="text-gray-800 font-bold text-2xl mb-6">
+                Sign into the employee portal
+              </h1>
+              <div className="flex items-center border-2 mb-8 py-2 px-3 rounded-2xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                  />
+                </svg>
+                <input
+                  id="email"
+                  className=" pl-2 w-full outline-none border-none"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value="alice@dock.io"
+                />
+              </div>
 
+              <div className="flex items-center border-2 mb-8 py-2 px-3 rounded-2xl ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path
+                    fillRule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <input
+                  className="pl-2 w-full outline-none border-none"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  value="thisisverysecure"
+                />
+              </div>
 
+              <button
+                type="submit"
+                className="block w-full bg-blue-600 mt-5 py-2 rounded-full hover:bg-blue-700 hover:-translate-y-1 transition-all duration-250 text-white font-semibold mb-2">
+                Authorize
+              </button>
+              <div className="flex justify-between mt-6">
+                <span className="text-sm ml-2">
+                  <i>Any email/password will work for this demo</i>
+                </span>
 
+                <a
+                  href="https://dock.io"
+                  className="text-sm ml-2 hover:text-blue-500 cursor-pointer hover:-translate-y-1 duration-250 transition-all">
+                  Learn more
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }

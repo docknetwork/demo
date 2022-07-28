@@ -1,5 +1,5 @@
 {
-  "plugins": ["jest"],
+  "plugins": [],
   "globals": {
     "process": "readonly"
   },
@@ -7,7 +7,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["next", "eslint:recommended", "plugin:react/recommended", "plugin:jest/recommended", "airbnb-base"],
+  "extends": ["next", "eslint:recommended", "plugin:react/recommended", "airbnb-base"],
   "rules": {
     "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
     "class-methods-use-this": "off",
