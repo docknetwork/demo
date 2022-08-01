@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Layout({ title = 'Employee Portal', children }) {
   const navLinks = [
@@ -7,15 +8,15 @@ export default function Layout({ title = 'Employee Portal', children }) {
       link: '/dashboard',
       active: true,
     },
-    {
-      title: 'Requests',
-      link: '/requests',
-    },
+    // {
+    //   title: 'Requests',
+    //   link: '/requests',
+    // },
   ];
 
   return (
     <>
-      <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+      <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-gray-50 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
         <div>
           <div className="-mx-6 px-6 py-4 text-center">
             <a href="https://dock.io" target="_blank" title="home">
@@ -39,15 +40,16 @@ export default function Layout({ title = 'Employee Portal', children }) {
 
           <ul className="space-y-2 tracking-wide mt-8">
             {navLinks.map((link) => (
-              <li>
-                <a
-                  href="#"
-                  aria-label="dashboard"
-                  className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl transition duration-300${
-                    link.active ? ' text-white bg-gray-500' : ''
-                  }`}>
-                  <span className="-mr-1 font-medium">{link.title}</span>
-                </a>
+              <li key={link.link}>
+                <Link href={link.link} passHref>
+                  <a
+                    aria-label="dashboard"
+                    className={`relative px-3 py-2 flex items-center space-x-4 rounded-md transition duration-300${
+                      link.active ? ' text-gray-600 bg-gray-200' : ''
+                    }`}>
+                    <span className="-mr-1 font-medium">{link.title}</span>
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>
