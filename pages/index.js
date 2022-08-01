@@ -1,8 +1,14 @@
 import React from 'react';
-// import Head from 'next/head';
-// import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    router.push('/dashboard');
+  }
+
   return (
     <>
       <div className="h-screen flex">
@@ -69,8 +75,9 @@ export default function Home() {
           style={{ width: '100%' }}>
           <div className="w-full px-8 md:px-32 lg:px-24">
             <form
+              onSubmit={handleFormSubmit}
               className="bg-white rounded-md shadow-2xl p-5"
-              method="POST"
+              method="GET"
               action="/dashboard"
               style={{ maxWidth: '500px', margin: '0 auto' }}>
               <h1 className="text-gray-800 font-bold text-2xl mb-6">
