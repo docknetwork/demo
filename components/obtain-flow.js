@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../components/layout';
-import InfoAlert from '../components/info-alert';
+import Layout from './layout';
+import InfoAlert from './info-alert';
 
 function FlowStep({ title, description, btnText = 'Get My Credential', children, onClick }) {
   return (

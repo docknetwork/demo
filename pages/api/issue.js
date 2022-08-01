@@ -1,10 +1,9 @@
-
 import axios from 'axios';
 
 const axiosHeaders = {
   headers: {
     'DOCK-API-TOKEN': process.env.DOCK_API_TOKEN,
-  }
+  },
 };
 
 const baseUrl = process.env.DOCK_API_URL;
@@ -20,25 +19,26 @@ export default async (req, res) => {
     subjectName = 'Alice Doe',
     subjectEmail = 'alice@dock.io',
     // type = 'employeeid',
-  } = (req.body || {});
+  } = req.body || {};
 
-  const result = await axios.post(`${baseUrl}/credentials`, {
-    "anchor": false,
-    "persist": false,
-    "credential": {
-      "name": "Acme Employee ID",
-      "type": [
-        "VerifiableCredential",
-        "EmployeeIDCredential"
-      ],
-      "issuer": issuerDID,
-      "subject": {
-        "name": subjectName,
-        "email": subjectEmail,
-        "employeeId": 123456
-      }
-    }
-  }, axiosHeaders);
+  const result = await axios.post(
+    `${baseUrl}/credentials`,
+    {
+      anchor: false,
+      persist: false,
+      credential: {
+        name: 'Acme Employee ID',
+        type: ['VerifiableCredential', 'EmployeeIDCredential'],
+        issuer: issuerDID,
+        subject: {
+          name: subjectName,
+          email: subjectEmail,
+          employeeId: 123456,
+        },
+      },
+    },
+    axiosHeaders
+  );
 
   res.json(result.data);
-}
+};

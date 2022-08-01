@@ -19,7 +19,7 @@ export default function Layout({ title = 'Employee Portal', children }) {
       <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-gray-50 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
         <div>
           <div className="-mx-6 px-6 py-4 text-center">
-            <a href="https://dock.io" target="_blank" title="home">
+            <a href="https://dock.io" target="_blank" title="home" rel="noreferrer">
               <img
                 src="/docklogo.svg"
                 className="w-20"

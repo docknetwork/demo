@@ -1,7 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-// import Head from 'next/head';
-// import Image from 'next/image';
 
 import Layout from '../components/layout';
 import InfoAlert from '../components/info-alert';
@@ -83,14 +81,17 @@ function CredentialSelector() {
   const router = useRouter();
 
   function handleClickOffer({ slug }) {
-    router.push(`/obtain/${slug}`)
+    router.push(`/obtain/${slug}`);
   }
 
   return (
     <div className="px-3 md:lg:xl:px-10 py-10 bg-opacity-10">
       <div className="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl border ">
         {credentialOffers.map((offer) => (
-          <div onClick={() => handleClickOffer(offer)} className="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+          <div
+            key={offer.slug}
+            onClick={() => handleClickOffer(offer)}
+            className="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
             {offer.icon}
             <p className="text-xl font-medium text-slate-700 mt-3">{offer.title}</p>
             <p className="mt-2 text-sm text-slate-500">{offer.description}</p>
@@ -99,7 +100,9 @@ function CredentialSelector() {
                 <>
                   <span className="text-gray-500 font-semibold text-xs">Requires:</span>
                   {offer.requires.map((req) => (
-                    <span className="px-3 py-1 rounded-lg border border-gray-300 text-gray-500 font-semibold text-xs flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                    <span
+                      key={req}
+                      className="px-3 py-1 rounded-lg border border-gray-300 text-gray-500 font-semibold text-xs flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
                       {req}
                     </span>
                   ))}
