@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import QRCode from 'react-qr-code';
 
 import ObtainFlow from '../../components/obtain-flow';
+import ObtainQRDisplay from '../../components/obtain-qr';
+import RequireProofObtain from '../../components/require-proof-obtain';
 
-function EmployeeIDOBtain() {
-  return (
-    <div className="flex justify-center items-center">
-      <QRCode value="maggot" />
-    </div>
-  );
-}
+const SERVER_URL = process.env.SERVER_URL || process.env.VERCEL_URL || 'http://localhost:3000';
 
 export default function ObtainProofOfEmployment() {
   const router = useRouter();
   const [step, setStep] = useState(0);
+  const [proof, setProof] = useState();
+
+  function handleGotProof(data) {
+    setProof(data);
+    setStep(step + 1);
+  }
 
   const credentialSteps = [
     {
@@ -67,9 +68,31 @@ export default function ObtainProofOfEmployment() {
           <br />
         </>
       ),
-      children: <EmployeeIDOBtain />,
+      children: <RequireProofObtain type="proofOfEmployment" onPresentedProof={handleGotProof} />,
+      // btnText: 'Got it, take me back!',
+      // onClick: () => {
+      //   router.push('/dashboard');
+      // },
+    },
+    {
+      title: 'Employee ID has been verified',
+      description: (
+        <>
+          Employee ID has been verified successfully
+          <br />
+          Scan the QR code below to receive your Proof of Employment credential.
+          <br />
+          <br />
+        </>
+      ),
+      children: proof && (
+        <ObtainQRDisplay
+          value={`${SERVER_URL}/api/issue?type=proofOfEmployment&proofId=${proof.id}`}
+        />
+      ),
       btnText: 'Got it, take me back!',
       onClick: () => {
+        console.log(`${SERVER_URL}/api/issue?type=proofOfEmployment&proofId=${proof.id}`);
         router.push('/dashboard');
       },
     },
