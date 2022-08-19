@@ -154,14 +154,16 @@ function CredentialSelector() {
         <p className=" text-white">
           {' '}
           <span className="text-3xl font-medium">Talk to us</span> <br />
-          <span className="text-md">Contact us at Dock to book a consultation call, we also offer a no code solution</span>
+          <span className="text-md">
+            Contact us at Dock to book a consultation call, we also offer a no code solution
+          </span>
         </p>
         <a
           href="https://dock.io/contact"
           target="_blank"
           type="submit"
           style={{ width: '158px' }}
-          className="text-center block bg-blue-600 mt-auto mb-auto py-2 rounded-full hover:bg-blue-700 hover:-translate-y-1 transition-all duration-250 text-white font-semibold">
+          className="text-center block bg-blue-600 mt-auto mb-auto py-2 rounded-full hover:bg-blue-700 hover:-translate-y-1 transition-all duration-250 text-white font-semibold" rel="noreferrer">
           Contact Us
         </a>
       </div>

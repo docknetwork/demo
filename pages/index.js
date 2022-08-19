@@ -102,9 +102,10 @@ export default function Home() {
             </h1>
 
             <p className="text-white mt-1">
-              In this interactive demo you will see how Dock's technology can be used to solve real world problems.
-              Verifiable Credentials allow users to interact with various services in a trusted manner and prove to others
-              their attestations. This is just one use case of many.
+              In this interactive demo you will see how Dock&apos;s technology can be used to solve real
+              world problems. Verifiable Credentials allow users to interact with various services
+              in a trusted manner and prove to others their attestations. This is just one use case
+              of many.
             </p>
             <br />
             <br />
