@@ -98,13 +98,13 @@ export default function Home() {
               width: '100%',
             }}>
             <h1 className="text-white font-bold text-4xl">
-              Experience a world of more trusted digital interactions.
+              Demo Verifiable Credential technology for trusted digital interactions
             </h1>
 
             <p className="text-white mt-1">
-              Welcome! In this interactive demo, we’ll see how trusted digital credentials can
-              streamline the processes behind everyday life and empower people with control over
-              their digital information.
+              In this interactive demo you will see how Dock's technology can be used to solve real world problems.
+              Verifiable Credentials allow users to interact with various services in a trusted manner and prove to others
+              their attestations. This is just one use case of many.
             </p>
             <br />
             <br />
