@@ -31,9 +31,7 @@ export default function RequireProofObtain({ onPresentedProof }) {
   }, [proofRequest]);
 
   function getQRURL(request) {
-    const url = `dockwallet://proof-request?url=${encodeURIComponent(request.response_url)}&nonce=${encodeURIComponent(request.nonce)}`;
-    console.log('request.response_url', request.response_url, request.nonce);
-    return url;
+    return `dockwallet://proof-request?url=${encodeURIComponent(request.response_url)}&nonce=${encodeURIComponent(request.nonce)}`;
   }
 
   return proofRequest ? (

@@ -17,3 +17,7 @@ a {
   box-sizing: border-box;
   font-family: 'Satoshi-Variable';
 }
+
+.text-base {
+  font-size: 14px;
+}

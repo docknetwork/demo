@@ -36,10 +36,11 @@ export default function ObtainFlow({ step, setStep, credentialSteps }) {
 
   return (
     <Layout title="Get your credential">
-      <InfoAlert>
-        On this page you can obtain a an Employee ID credential which can then be used to present as
-        a proof for portal services.
-      </InfoAlert>
+      <div className="px-3 md:lg:xl:px-10">
+        <InfoAlert>
+          On this page you can obtain a credential which can then be used to present as a proof for portal services.
+        </InfoAlert>
+      </div>
 
       {currentStep && (
         <FlowStep {...currentStep} onClick={currentStep.onClick || (currentStep.nextBtn ? handleNextStep : undefined)} />

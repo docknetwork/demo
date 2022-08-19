@@ -3,8 +3,9 @@ import React from 'react';
 export default function InfoAlert({ children }) {
   return (
     <div
-      className="bg-blue-100 rounded-lg py-5 px-6 mb-3 text-base text-blue-700 inline-flex items-center w-full"
-      role="alert">
+      className="bg-blue-100 rounded-lg py-3 px-4 mb-3 text-base text-blue-700 inline-flex items-center w-full"
+      role="alert"
+      >
       <svg
         aria-hidden="true"
         focusable="false"
