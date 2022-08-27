@@ -11,7 +11,7 @@ const credentialOffers = [
     description:
       'First day on the job? Get yourself a digital employee ID to access secure online services',
     icon: (
-      <span className="text-white shadow-lg">
+      <span className="text-white">
         <svg
           width="72"
           height="72"
@@ -33,7 +33,7 @@ const credentialOffers = [
     title: 'Proof of Employment',
     description: 'Prove to banks and organisations that you have gainful employment with Acme Inc',
     icon: (
-      <span className="text-white shadow-lg">
+      <span className="text-white">
         <svg
           width="72"
           height="72"
@@ -69,7 +69,7 @@ const credentialOffers = [
     description:
       'Congratulations on passing the training course! Obtain a credential for it here with a web/pdf option',
     icon: (
-      <span className="text-white shadow-lg">
+      <span className="text-white">
         <svg
           width="72"
           height="72"
@@ -151,7 +151,7 @@ function CredentialSelector() {
         ))}
       </div>
       <div className="w-full shadow-xl border py-10 px-14 my-10 flex justify-between items-center rounded-lg">
-        <p className=" text-white">
+        <p className="text">
           {' '}
           <span className="text-3xl font-medium">Talk to us</span> <br />
           <span className="text-md">
