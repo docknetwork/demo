@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import ObtainFlow from '../../components/obtain-flow';
 import ObtainQRDisplay from '../../components/obtain-qr';
 
-const SERVER_URL = process.env.SERVER_URL || process.env.VERCEL_URL || 'http://localhost:3000';
+const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000';
 
 export default function ObtainEmployeeID() {
   const router = useRouter();
