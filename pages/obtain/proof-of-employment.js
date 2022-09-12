@@ -5,7 +5,10 @@ import ObtainFlow from '../../components/obtain-flow';
 import ObtainQRDisplay from '../../components/obtain-qr';
 import RequireProofObtain from '../../components/require-proof-obtain';
 
-const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000';
+const SERVER_URL =
+  process.env.NEXT_PUBLIC_SERVER_URL ||
+  process.env.NEXT_PUBLIC_VERCEL_URL ||
+  'http://localhost:3000';
 
 export default function ObtainProofOfEmployment() {
   const router = useRouter();

@@ -66,7 +66,11 @@ export default async (req, res) => {
       const userCredential = proof.presentation.credentials[0];
 
       // Extra checking that we are the issuer of the credential
-      if (userCredential.issuer !== issuerDID) {
+      const issuerId =
+        typeof userCredential.issuer === 'object'
+          ? userCredential.issuer.id
+          : userCredential.issuer;
+      if (issuerId !== issuerDID) {
         res.status(400).json({ error: 'Invalid issuer' });
         return;
       }

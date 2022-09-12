@@ -163,7 +163,8 @@ function CredentialSelector() {
           target="_blank"
           type="submit"
           style={{ width: '158px' }}
-          className="text-center block bg-blue-600 mt-auto mb-auto py-2 rounded-full hover:bg-blue-700 hover:-translate-y-1 transition-all duration-250 text-white font-semibold" rel="noreferrer">
+          className="text-center block bg-blue-600 mt-auto mb-auto py-2 rounded-full hover:bg-blue-700 hover:-translate-y-1 transition-all duration-250 text-white font-semibold"
+          rel="noreferrer">
           Contact Us
         </a>
       </div>
