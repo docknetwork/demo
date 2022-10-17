@@ -4,7 +4,15 @@ This is a demo application showing how you can use the Dock API for credential i
 
 ## Getting Started
 
-First, run the development server:
+First, setup a .env file in the project's root folder
+
+```bash
+DOCK_API_URL=https://api-testnet.dock.io
+DOCK_API_TOKEN=  # you can generate a key at https://certs.dock.io/keys
+DOCK_API_DID= # the DID to use for the issuer. You can generate one here: https://certs.dock.io/dids
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
