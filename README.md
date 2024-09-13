@@ -1,6 +1,6 @@
 # Dock API Demo App
 
-This is a demo application showing how you can use the [Dock API](https://docs.api.dock.io) for credential issuance and verification. It offers a basic employee portal where a ficticious individual can be issued credentials that can be used with the [Dock Wallet](https://www.dock.io/dock-wallet-app) app.
+This is a demo application showing how you can use the [Dock API](https://docs.dock.io/developer-documentation/dock-api) for credential issuance and verification. It offers a basic employee portal where a ficticious individual can be issued credentials that can be used with the [Dock Wallet](https://www.dock.io/dock-wallet-app) app.
 
 ## Getting Started
 
